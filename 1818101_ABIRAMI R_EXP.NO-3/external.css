@@ -1,0 +1,17 @@
+h3
+	{
+	color: #A52A2A;
+	font-family:Comic Sans MS, Comic Sans, cursive;
+	font-stretch: extra-condensed;
+	font-weight: 300;
+	font-style: italic;
+	}
+
+ul
+	{
+	list-style-type: disc;
+	font-family:Comic Sans MS, Comic Sans, cursive;
+	font-stretch: extra-condensed;
+	font-weight: 300;
+	font-style: italic;
+	}
