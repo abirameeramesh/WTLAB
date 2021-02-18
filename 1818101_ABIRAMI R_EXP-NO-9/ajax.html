@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1818101_AJAXFORMVALIDATION</title>
+  <style type="text/css">
+      .button{
+      background-color: black;color: white;padding: 5px;border-radius: 8px;border: 2px solid black;
+      font-family:Comic Sans MS, Comic Sans, cursive;
+    font-stretch: extra-condensed;font-weight: 300;font-style: italic;display: inline-block;
+    }
+
+  body{
+      font-family:Comic Sans MS, Comic Sans, cursive;
+    font-stretch: extra-condensed;font-weight: 300;font-style: italic;display: inline-block;
+     }
+  ::placeholder{
+      font-family:Comic Sans MS, Comic Sans, cursive;
+      font-stretch: extra-condensed;font-weight: 300;font-style: italic;display: inline-block;
+     }
+  input{
+      
+      padding: 10px;border-radius: 5px;border: 2px solid black;width:200px;height:5px;background-color: #D1F2EB ;
+      font-family:Comic Sans MS, Comic Sans, cursive;
+      font-stretch: extra-condensed;font-weight: 300;font-style: italic;display: inline-block;
+     }
+  input:hover{
+      background-color:#aaff80;
+     }
+  td{
+      padding:1px 8px ;
+     }
+       
+  </style>
+</head>
+<body align="center" style="background-image: url('https://www.desktopbackground.org/download/o/2011/09/24/270726_blur-wallpapers-backgrounds-with-quality-hd_1920x1080_h.jpg');width: 100%;height: 90%; background-size: cover; background-repeat: no-repeat;">
+   
+      
+      <form align="center" action="ajax" method="POST" onsubmit="return validator(this);">
+        
+        <b><h2>FORM VALIDATION USING AJAX</h2></b>
+          
+        <table align="center" style="padding: 10px;border-radius: 25px;border: 2px solid black;width:600px;height:200px;" >
+        
+          <tr>
+            <td align="left" >
+              <label for="name"><h4>Name : </h4></label>
+            </td>
+            <td>
+              <input type="text" placeholder="Enter Your Name" name="username" id="name" onchange="check(this.name,this.value);">
+
+              <p style="color: #FF0000" id="usernamemsg"></p>
+           </td>
+          </tr>
+          
+          <tr>
+            <td align="left" >
+              <label for="age"><h4>Age : </h4></label>
+            </td>
+            <td>
+              <input type="text" placeholder="Enter Your Age" name="dob" id="age" onchange="check(this.name,this.value);">
+          <p style="color: #FF0000" id="dobmsg"></p>
+          </td>
+          </tr>
+          <tr>
+            <td align="left" >
+              <label for="mail"><h4>Email : </h4></label>
+            </td>
+            <td>
+              <input type="text" placeholder="Enter Your Mailid" name="emailId" id="mail" onchange="check(this.name,this.value);">
+          <p style="color: #FF0000" id="emailIdmsg"></p>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" >
+              <label for="password1"><h4>Password :</h4></label>
+            </td>
+            <td>
+              <input type="password" placeholder="Enter Your Password" name="password1" id="password1" onchange="check(this.name,this.value);">
+          <p style="color: #FF0000" id="password1msg"></p>
+            </td>
+          </tr>
+          <tr>
+            
+            <td align="left" >
+              <label for="password2"><h4>Confirm Password : </h4></label>
+            </td>
+          
+            <td>
+              <input type="password" placeholder="Retype Your Password" name="password2" id="password2" onchange="passwordcheck(this.value);">
+              <p style="color: #FF0000" id="password2msg"></p>
+            </td>
+
+          </tr>
+          <tr>
+            <td >
+            </td>
+            <td align="left">
+               <button id="btn1" type="submit" name="button1" class="button" ><div>SUBMIT</div></button>  
+              <button id="btn2" type="reset" name="button2" class="button" ><div>RESET</div></button>
+            </td>
+            <td></td>
+          </tr>
+        
+        <br>
+        </table>
+      </form>
+      
+   </div>
+  <script type="text/javascript">
+
+  function check(field,data){
+      if(data!=null&&data!=""){
+       
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function(){
+      if(this.readyState ==4  && this.status == 200){
+            if(this.responseText!=null && this.responseText!="")
+            {
+              document.getElementById(field+"msg").style.display = "block";
+              document.getElementById(field+"msg").innerHTML = this.responseText;
+              document.getElementById("btn1").disabled = true;
+            }
+           if(this.responseText == "valid"){
+              document.getElementById(field+"msg").style.display = "none";
+              document.getElementById("btn1").disabled = false;
+           }
+
+        }
+      };
+      xhttp.open("GET","ajax?field="+field+"&data="+data,true);
+      xhttp.send();
+    }
+  }
+
+  function passwordcheck(password2){
+    var password1 = document.getElementById("password1").value;
+    if(password1 !== password2){
+      document.getElementById("password2msg").style.display = "block";
+      document.getElementById("password2msg").innerHTML ="Note: Your Password doesn't match!";
+      document.getElementById("btn1").disabled = true;
+    }
+    else{
+          document.getElementById("password2msg").style.display = "none";
+          document.getElementById("btn1").disabled = false;
+        }
+  }
+
+  function validator(form){
+    var inputs = form.getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+            if(inputs[i].value == ""){
+                alert("All Fields are Mandatory... Please fill all fields!");
+                return false;
+            }
+          }
+          return true;
+  }
+ 
+  </script>
+</body>
+</html>
