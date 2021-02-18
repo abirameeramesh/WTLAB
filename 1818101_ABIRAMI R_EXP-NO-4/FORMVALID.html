@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form Validation
+        </title>
+        <meta name="description" content="form validating page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        
+        label{
+            font-family:Comic Sans MS, Comic Sans, cursive;
+            font-weight: 300;
+            font-style: italic;
+            width:200px;
+            display: inline-block;
+        }
+        h2
+        { color:white;
+            font-family:Comic Sans MS, Comic Sans, cursive; 
+            font-stretch: extra-condensed;
+            font-weight:300;
+            font-style: italic; 
+            
+         }
+    div{
+    height: 7em;
+    position: relative }
+
+        </style>
+        
+    </head>
+    <body style="background-image: url('https://coolbackgrounds.io/images/unsplash/josh-bean-medium-9501ba9f.jpg');width: 100%;height: 90%; background-size: cover; background-repeat: no-repeat;">
+        <table align="center" bgcolor=#17202A><h2 align="center" ><div>FORM VALIDATION USING JAVASCRIPT</div></h2>
+        </table>
+        
+        <table align="center"  style="padding: 10px;border-radius: 25px;border: 2px solid black" > 
+        <tr><td>
+        <form name = "myform" method= "post" >
+            <label for="name">Name:</label><input type="textbox" placeholder="Enter Your Name"id="name" required/><p></p>
+            <label for="mail">Email Id:</label><input type="textbox" placeholder="Enter Your Mail Id"id="mail" required/><p></p>
+            <label for="dob">Date of Birth:(DD/MM/YYYY format) </label><input type="textbox" placeholder="Enter Your Date of Birth" id="dob" required/><p></p>
+            <label for="age">Age: </label><label id="age"></label> <p></p>
+            <button style="font-family:Comic Sans MS, Comic Sans, cursive; font-stretch: extra-condensed;font-weight:300;font-style: italic;" onmouseover="validateDate()" type ="submit" value = "submit" onclick="validate(this)" >SUBMIT</button>
+            <button style="font-family:Comic Sans MS, Comic Sans, cursive; font-stretch: extra-condensed;font-weight:300;font-style: italic;" type ="reset" value = "reset" >RESET</button>
+        </form>
+        </td></tr>
+        </table>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

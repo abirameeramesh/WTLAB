@@ -1,0 +1,51 @@
+<?xml version = "1.0" ?>
+<class>
+<student rollno ="1815190">
+    <firstname>Akila</firstname>
+    <lastname>Raj</lastname>
+    <yearofstudy>1st year</yearofstudy>
+    <cgpa>8.26</cgpa>
+</student>
+<student rollno ="1815102">
+    <firstname>Monica</firstname>
+    <lastname>Sri</lastname>
+    <yearofstudy>1st year</yearofstudy>
+    <cgpa>9.67</cgpa>
+</student>
+<student rollno ="1818501">
+    <firstname>Ramesh</firstname>
+    <lastname>Kumar</lastname>
+    <yearofstudy>2nd year</yearofstudy>
+    <cgpa>8.54</cgpa>
+</student>
+<student rollno ="1818502">
+    <firstname>Vignesh</firstname>
+    <lastname>Kumar</lastname>
+    <yearofstudy>2nd year</yearofstudy>
+    <cgpa>9.32</cgpa>
+</student>
+<student rollno ="1818601">
+    <firstname>Adith</firstname>
+    <lastname>Patel</lastname>
+    <yearofstudy>3rd year</yearofstudy>
+    <cgpa>7.25</cgpa>
+</student>
+<student rollno ="1818608">
+    <firstname>Surya</firstname>
+    <lastname>Kumar</lastname>
+    <yearofstudy>3rd year</yearofstudy>
+    <cgpa>6.87</cgpa>
+</student>
+<student rollno ="1817157">
+    <firstname>Vijay</firstname>
+    <lastname>Kumar</lastname>
+    <yearofstudy>Final year</yearofstudy>
+    <cgpa>8.67</cgpa>
+</student>
+<student rollno ="1817149">
+    <firstname>Raj</firstname>
+    <lastname>Kiran</lastname>
+    <yearofstudy>Final year</yearofstudy>
+    <cgpa>7.07</cgpa>
+</student>
+</class>
